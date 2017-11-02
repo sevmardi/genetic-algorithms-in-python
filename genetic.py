@@ -7,7 +7,7 @@ extract the genetic engine code from that specific to guessing the password so i
 import random 
 
 
-def _generate_parent(length):
+def _generate_parent(length, geneSet):
     genes = []
     while len(genes) < length:
         sampleSize = min(length - len(genes), len(geneSet))

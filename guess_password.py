@@ -18,7 +18,7 @@ def generate_parent(length):
     return ''.join(genes)
 
 
-def get_fitness(guess):
+def get_fitness(guess, target):
     return sum(1 for expected, actual in zip(target, guess) if expected == actual)
 
 
@@ -32,10 +32,10 @@ def mutate(parent):
     return ''.join(child_genes)
 
 
-def dislay(guess):
-    time_diff = datetime.datetime.now() - start_time
-    fitness = get_fitness(guess)
-    print("{0}\t{1}\t{2}".format(guess, fitness, str(time_diff)))
+def dislay(genes, target, startTime):
+    time_diff = datetime.datetime.now() - startTime
+    fitness = get_fitness(genes, target)
+    print("{0}\t{1}\t{2}".format(genes, fitness, str(time_diff)))
 
 
 if __name__ == '__main__':
