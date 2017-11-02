@@ -1,2 +1,3 @@
-# genetic-algorithms-in-python-
+# Genetic Algorithms In Python
+
 Sheppard - Genetic Algorithms with Python
